@@ -1,0 +1,60 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Windows;
+
+public class function : MonoBehaviour
+{
+    public TMP_InputField input1, input2;
+    public TextMeshProUGUI result;
+    public void add()
+    {
+        var a = float.Parse(input1.text);
+        var b = float.Parse(input2.text);
+
+        result.text=(a+b).ToString();
+    }
+    public void getinput(Button value)
+    {
+        if (input1.text=="")
+        {
+            input1.text = value.transform.GetComponentInChildren<TextMeshProUGUI>().text;
+        }
+        else
+        {
+            input2.text = value.transform.GetComponentInChildren<TextMeshProUGUI>().text;
+        }
+    }
+    public void clear()
+    {
+        input1.text = "";
+        input2.text = "";
+        result.text = "0";
+    }
+    public void Awake()
+    {
+        Debug.Log("Awake"); 
+    }
+    public void Start()
+    {
+        Debug.Log("start");
+    }
+   
+    public void OnEnable()
+    {
+        Debug.Log("onenable");
+
+    }
+    public void OnDisable()
+    {
+        Debug.Log("ondisable");
+
+    }
+    public void OnDestroy()
+    {
+        Debug.Log("ondestroy");
+
+    }
+}
