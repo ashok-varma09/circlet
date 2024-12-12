@@ -1,0 +1,47 @@
+
+
+#include <stdio.h>
+
+int main()
+{
+ int sum,m,s,e,h;
+ float avg;
+  printf("Enter your marks :\n");
+  scanf("%d%d%d%d",&m,&h,&e,&s);
+
+         sum=m+s+h+e;
+          avg=(int)sum/4;
+  printf("Average is %.2f\%\n",avg);
+        printf("%s", 
+        (avg > 35) ? 
+            ((avg > 50) ? 
+                ((avg > 70) ? 
+                    ((avg > 80) ? 
+                        ((avg > 90) ? "A++" : "A"): 
+                    "B") : 
+                "C") : 
+            "D") : 
+        "fail"
+    );
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
